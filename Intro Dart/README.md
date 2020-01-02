@@ -25,11 +25,11 @@
     Valor de defecto de una variable es "null"
 
 ### Clases
-    ```
-        class nombreClase{
+```
+    class nombreClase{
 
-        }
-    ```
+    }
+```
 ## DartPad
 
 # https://dartpad.dartlang.org/
@@ -71,29 +71,29 @@ Importante: Si no se inicializa una variable, Dart automaticamente lo define com
 ## Tipo de Datos
 
 ### Numéricos
-    int = Números entero.
-    double = Número real.
-    ```
-    void main(){
-        int nombreDeLaVariable;
-    }
-    ```
+int = Números entero.
+double = Número real.
+```
+void main(){
+    int nombreDeLaVariable;
+}
+```
 
 ### Carácteres
-    Se define con la parabra "String".
-    ```
-    void main(){
-        String nombreDeLaVariable = 'Tu nombre';
-        //muestra lo que contenga la Variable
-        print(nombreDeLaVariable);
+Se define con la parabra "String".
+```
+void main(){
+    String nombreDeLaVariable = 'Tu nombre';
+    //muestra lo que contenga la Variable
+    print(nombreDeLaVariable);
 
-        //muestra la letra en la posición cero
-        print(nombreDeLaVariable[0]);
+    //muestra la letra en la posición cero
+    print(nombreDeLaVariable[0]);
 
-        //muestra la letra en la última posición
-        print(nombreDeLaVariable[nombreDeLaVariable-1]);
-    }
-    ```
+    //muestra la letra en la última posición
+    print(nombreDeLaVariable[nombreDeLaVariable-1]);
+}
+```
 ### Boleanos y Condiciones
 Guarda valores "true" o "false"
 ```
