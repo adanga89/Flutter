@@ -378,3 +378,50 @@ class PezVolador extends Pez with Nadador, Volador{}
 
 //FIN Mixins
 ```
+
+## Futures o Futuros
+Son impresindibles para realizar tareas asincronas.
+
+```
+void main(){
+  print("Pidiendo Datos");
+  httpGet("https://google.com")
+    .then( (data) => print(data))
+    .catchError( (err) => print(err));  
+  print("Petición Finalizada");
+}
+
+//Ejemplo ficticio
+
+//Future<TipoDeDato> Nombre(Parametro)
+Future<String> httpGet(String url){
+  return Future.delayed( new Duration( seconds: 4), (){
+    return "Hola Mundo";
+  });
+}
+```
+
+### Async - Await
+
+Para utilizar el "await" es necesario estar dentro de una función "async"
+
+Nota: No se puede crear constructores asincronos.
+
+
+```
+void main() async{
+  print("Pidiendo Datos");
+  String data = await httpGet("https://google.com");    
+  print(data);
+  print("Petición Finalizada");
+}
+
+//Ejemplo ficticio
+
+//Future<TipoDeDato> Nombre(Parametro)
+Future<String> httpGet(String url){
+  return Future.delayed( new Duration( seconds: 4), (){
+    return "Hola Mundo";
+  });
+}
+```
