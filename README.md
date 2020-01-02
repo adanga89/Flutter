@@ -19,14 +19,19 @@
     void main(){}
 
 ### Ciclos
-    for ...
+    for
 
 ### Tipos de Variables
     Valor de defecto de una variable es "null"
 
+### Clases
+    ```
+        class nombreClase{
+
+        }
+    ```
 ## DartPad
     https://dartpad.dartlang.org/
 
     
 # Instalacion
-...
