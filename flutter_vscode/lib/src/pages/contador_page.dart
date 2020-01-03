@@ -36,6 +36,7 @@ class _ContadorPageState extends State<ContadorPage>{
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
+          SizedBox( width: 30.0),
           FloatingActionButton(
           onPressed: () {
             //Para redibujar es necesario SetState
