@@ -1,3 +1,4 @@
+import 'package:componentes/src/pages/alert_page.dart';
 import 'package:componentes/src/utils/icono_string_util.dart';
 import 'package:flutter/material.dart';
 import 'package:componentes/src/providers/menu_provider.dart';
@@ -29,13 +30,13 @@ class HomePage extends StatelessWidget {
       initialData: [],
       builder: (context, AsyncSnapshot<List<dynamic>> snapshot){
        return ListView(
-         children: _listaItems( snapshot.data ),
+         children: _listaItems( context, snapshot.data ),
        );
       },
     );
   }
       
-  List<Widget> _listaItems(List<dynamic> data) {
+  List<Widget> _listaItems(BuildContext context, List<dynamic> data) {
     
     final List<Widget> opciones = [];
 
@@ -46,7 +47,17 @@ class HomePage extends StatelessWidget {
         leading: getIcon( opt['icon']),
         //trailing, asigna un widget al final del elemento
         trailing: Icon( Icons.keyboard_arrow_right),
-        onTap: () {},
+        onTap: () {
+          //Para navegar se necesita Navigator(método antigüo)
+          /*final route = MaterialPageRoute(
+            builder: (context) => AlertPage()
+          );
+          Navigator.push(context, route);*/
+
+          //Navigator más compacto
+          Navigator.pushNamed(context, opt['ruta']);
+          //Para que funcione hay que hacer una configuración en el main.
+        },
       );
 
       opciones..add(wtemp)
