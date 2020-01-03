@@ -45,7 +45,7 @@ class _ContadorPageState extends State<ContadorPage>{
           },
           child: Text("0"),
         ),
-        Expanded(child: SizedBox( )),
+        Expanded(child: SizedBox()),
         FloatingActionButton(
           onPressed: () {
             //Para redibujar es necesario SetState
